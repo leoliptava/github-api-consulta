@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { VscSearch } from 'react-icons/vsc';
 import {
   Tile1,
   Tile2,
@@ -9,6 +10,7 @@ import {
   Container,
   Sidebar,
   Main,
+  New,
 } from './styles';
 
 import Profile from './profile';
@@ -75,6 +77,11 @@ const RepositoriesPage = () => {
           currentLanguage={currentLanguage}
         />
       </Main>
+
+      <New href="/">
+        BUSCAR NOVO REPOSITÓRIO
+        <VscSearch size={20} />
+      </New>
     </Container>
   );
 };

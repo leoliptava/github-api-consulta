@@ -58,3 +58,69 @@ export const Data = styled.p`
     margin-right: 10px;
   }
 `;
+
+export const ArrowTop = styled.div`
+  background-color: #666;
+  height: 5px;
+  left: -6px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+
+  &:after {
+    background-color: #f5f5fa;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s;
+    left: 100%;
+    right: 0;
+    transition-delay: 0s;
+  }
+`;
+export const ArrowBottom = styled.div`
+  background-color: #666;
+  height: 5px;
+  left: -6px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+
+  &:after {
+    background-color: #f5f5fa;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s;
+    left: 0;
+    right: 100%;
+    transition-delay: 0.15s;
+  }
+`;
+
+export const Arrow = styled.a`
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  transition: transform 0.1s;
+  width: 20px;
+  &:hover {
+    ${ArrowTop}::after {
+      left: 0;
+      transition-delay: 0.15s;
+    }
+
+    ${ArrowBottom}::after {
+      right: 0;
+      transition-delay: 0s;
+    }
+  }
+`;

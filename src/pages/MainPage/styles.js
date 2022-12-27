@@ -30,7 +30,8 @@ export const Form = styled.div`
 `;
 
 export const Input = styled.input`
-  background: rgba(0, 0, 0, 0.8);
+  background: #f5f5fa;
+  border-radius: 8px;
   width: 100%;
   height: 64px;
   line-height: 64px;
@@ -38,6 +39,7 @@ export const Input = styled.input`
   font-size: 24px;
   margin-right: 24px;
   padding: 0 24px;
+  color: ${(props) => props.theme.colors.black};
   &::placeholder {
     color: ${(props) => props.theme.colors.metalDark};
   }
@@ -47,11 +49,41 @@ export const Button = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background: transparent;
   width: 80px;
   height: 64px;
-  border: 3px solid ${(props) => props.theme.colors.metalDark};
-
   transition: all 0.3s;
+
+  align-items: center;
+  background: #f5f5fa;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Cascadia Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  transition: 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  width: max-content;
+  word-break: normal;
+  word-spacing: normal;
+
+  &:hover {
+    background: #f8f8ff;
+  }
+`;
+
+export const Copy = styled.span`
+  position: fixed;
+  bottom: 10px;
 `;

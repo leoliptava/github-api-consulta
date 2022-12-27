@@ -24,7 +24,7 @@ export const Tile1 = styled.span`
   aspect-ratio: 1/1;
   display: block;
   transition: opacity 0.7s ease;
-  background-color: #fecd03;
+  background-color: #f8f8ff;
   transform-origin: 100% 100%;
   animation: flip-1 0.5s linear forwards;
   border: none;
@@ -43,7 +43,7 @@ export const Tile2 = styled.span`
   aspect-ratio: 1/1;
   display: block;
   transition: opacity 0.7s ease;
-  background-color: #fecd03;
+  background-color: #f8f8ff;
   transform-origin: 50% 100%;
   animation: flip-2 0.5s linear forwards;
   animation-delay: 0.5s;
@@ -60,7 +60,7 @@ export const Tile3 = styled.span`
   aspect-ratio: 1/1;
   display: block;
   transition: opacity 0.7s ease;
-  background-color: #fecd03;
+  background-color: #f8f8ff;
   transform-origin: 50% 0%;
   animation: flip-4 0.5s linear forwards;
   animation-delay: 1.5s;
@@ -77,7 +77,7 @@ export const Tile4 = styled.span`
   aspect-ratio: 1/1;
   display: block;
   transition: opacity 0.7s ease;
-  background-color: #fecd03;
+  background-color: #f8f8ff;
   transform-origin: 0% 50%;
   animation: flip-3 0.5s linear forwards;
   animation-delay: 1s;
@@ -143,5 +143,46 @@ export const Main = styled.section`
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
     padding: 40px 20px;
+  }
+`;
+
+export const New = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 20px;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  gap: 10px;
+
+  text-decoration: none;
+
+  align-items: center;
+  background: #f5f5fa;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 15px;
+  text-align: left;
+  transition: 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+
+  &:hover {
+    background: #f8f8ff;
   }
 `;
